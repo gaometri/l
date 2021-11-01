@@ -7,7 +7,7 @@ rain.type = "text/javascript", rain.src = "https://ajax.googleapis.com/ajax/libs
 				n = !1;
 			e.find("#Blog1_blog-pager-newer-link").remove(), e.on("click", "#Blog1_blog-pager-older-link a", function() {
 				return history.pushState("", "", this.href), i.get(this.href, {}, function(l) {
-					var o = i(l).find(".blog-post").length ? i(l) : i("<div></div>");
+					var o = i(l).find(".hfeed").length ? i(l) : i("<div></div>");
 					t.append(o.find(".blog-posts").html()), e.html(o.find("#Blog1_blog-pager-older-link").clone()), 
 					t.find(".more-article article").append(o.find(".more-article article").clone()), window.location.href.match("/search\\?updated-max") || (document.title = o.find(".post-title").first().text(), t.append('<div class="ignielMiddleAds">' + o.find(".ignielMiddleAds").html() + "</div>"), ignielMiddleAds()), n = !1
 				}, "html"), i(this).replaceWith('<span><img src="https://4.bp.blogspot.com/-a8y2WkWKzU0/W90DTo4X29I/AAAAAAAAG2c/5FWxJt9VaYUM7Mz-bH0emW3A50lJxCltQCLcBGAs/s1600/igniel-loading.gif"/></span>'), !1
